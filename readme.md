@@ -1,19 +1,17 @@
-# C++ Boilerplate
-[![Build Status](https://travis-ci.org/dpiet/cpp-boilerplate.svg?branch=master)](https://travis-ci.org/dpiet/cpp-boilerplate)
-[![Coverage Status](https://coveralls.io/repos/github/dpiet/cpp-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/dpiet/cpp-boilerplate?branch=master)
----
+# Depth perception using Mono camera
 
 ## Overview
 
-Simple starter C++ project with:
-
-- cmake
-- googletest
+The depth perception module aims to combine computer vision concepts with image processing
+techniques to estimate the distance of the human from the camera. We aim to explore the
+Histogram of Gradients (HOG) feature extractor as a human face feature detector and apply
+pioneering image processing techniques based on pin hole camera concept to provide accurate
+depth results.
 
 ## Standard install via command-line
 ```
-git clone --recursive https://github.com/dpiet/cpp-boilerplate
-cd <path to repository>
+git clone https://github.com/ToyasDhake/midterm_project.git
+cd midterm_project
 mkdir build
 cd build
 cmake ..
