@@ -30,7 +30,11 @@ The link to code coverage can be found here
 
 Travis path :
 
+[![Build Status](https://travis-ci.org/ToyasDhake/midterm_project.svg?branch=stub_function)](https://travis-ci.org/ToyasDhake/midterm_project)
+
 Coveralls :
+
+[![Coverage Status](https://coveralls.io/repos/github/ToyasDhake/midterm_project/badge.svg?branch=master)](https://coveralls.io/github/ToyasDhake/midterm_project?branch=master)
 
 ### Contributors
 
