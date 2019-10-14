@@ -79,7 +79,7 @@ cd midterm_project
 mkdir build
 cd build
 cmake .. 
-make -j<number of cores>  (Example: make -j12)
+make -j<number of cores>  (Example- make -j12)
 Run tests: ./test/cpp-test
 Run program: ./app/shell-app
 ```
