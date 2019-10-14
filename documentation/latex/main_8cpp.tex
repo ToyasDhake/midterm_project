@@ -1,0 +1,55 @@
+\hypertarget{main_8cpp}{}\section{/home/toyas/\+Desktop/midterm\+\_\+project/app/main.cpp File Reference}
+\label{main_8cpp}\index{/home/toyas/\+Desktop/midterm\+\_\+project/app/main.\+cpp@{/home/toyas/\+Desktop/midterm\+\_\+project/app/main.\+cpp}}
+
+
+Main file for implementation of the Depth Perception project.  
+
+
+{\ttfamily \#include $<$dlib/gui\+\_\+widgets.\+h$>$}\newline
+{\ttfamily \#include $<$dlib/opencv.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$opencv2/highgui/highgui.\+hpp$>$}\newline
+{\ttfamily \#include $<$distance.\+hpp$>$}\newline
+{\ttfamily \#include $<$face.\+hpp$>$}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main file for implementation of the Depth Perception project. 
+
+\begin{DoxyAuthor}{Author}
+Toyas Dhake (Driver), Shivam Akhauri (Navigator) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11 October 2019 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+2019 Toyas Dhake, Shivam Akhauri 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Loactions and distances of faces are stored in vector$<$\+Face$>$ can be either use to compute something else or add overlay on gui window.
+
+There are 2 options for gui, opencv or dlib we are using dlib hence cv\+::\+Mat needs to be converted to dlib\+::cv\+\_\+image.
+
+Definition at line 16 of file main.\+cpp.
+
