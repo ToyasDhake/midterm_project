@@ -28,7 +28,6 @@ We propose image processing techniques to estimate the distance of the human fro
 Accuracy: TBD
 Processing speed: TBD
 
-
 ### Known Limitations and Assumptions for the product :
 1. The depth estimation of the human from the robot’s frame of reference works within a range of 0.25 meters to 10 meters.
 2. The depth estimation model expects satisfactory lighting conditions.
@@ -50,7 +49,7 @@ https://docs.google.com/spreadsheets/d/1t8c64cWS98ADABuzGFxU81cme3-aIhM_4wCTikXW
 ### Meeting Notes (Minutes of Meetings)
 https://docs.google.com/document/d/1sAKEHlb5n9JzfRYK6OL4Pm4foj7QHOMjy63lytvxo4Y/edit?usp=sharing
 
-### Demo steps
+### Demo steps-Includes steps to run unit test cases for Stub (Note: Solitary test cases-TBD)
 ```
 git clone https://github.com/ToyasDhake/midterm_project.git
 cd midterm_project
@@ -88,12 +87,12 @@ For license information, see [LICENSE.txt](LICENSE.txt).
 ### Contributors
 
 -Toyas Dhake (Driver)
-Computer engineer, from MIT College of Engineering, Pune.
-Skilled in embedded system with applications involving Arduino, Raspberry Pi and Jetson Boards.
+-Computer engineer, from MIT College of Engineering, Pune.
+-Skilled in embedded system with applications involving Arduino, Raspberry Pi and Jetson Boards.
 
 -Shivam Akhauri (Navigator)
-Former Artificial Intelligence Engineer at Ether Labs
-Former Machine learning Engineer and Project Lead at Tata Elxsi
-Skilled in AI/ML with applications in Computer vision, NLP and Robotics.
+-Former Artificial Intelligence Engineer at Ether Labs
+-Former Machine learning Engineer and Project Lead at Tata Elxsi
+-Skilled in AI/ML with applications in Computer vision, NLP and Robotics.
 
 
