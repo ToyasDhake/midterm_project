@@ -22,12 +22,11 @@ We propose image processing techniques to estimate the distance of the human fro
 - High accuracy
 - Developed in C++(>11) with continuous integration 
 - Developed by a team of two in an Agile iterative process 
-- Standalone software product which includes all the dependencies
+- Standalone software product which includes all the dependencies (Note: This feature is still in development stage. We have added static libraries of Opencv and Dlib tp our repository. But still need to figure out a way to link these static libraries to our cmake. Hence, the current repo will expect opencv and dlib to be installed. Installation steps gievn below won't be needed in phase 2). 
 
 ### Results 
 Accuracy: TBD
 Processing speed: TBD
-
 
 ### Known Limitations and Assumptions for the product :
 1. The depth estimation of the human from the robot’s frame of reference works within a range of 0.25 meters to 10 meters.
@@ -50,8 +49,31 @@ https://docs.google.com/spreadsheets/d/1t8c64cWS98ADABuzGFxU81cme3-aIhM_4wCTikXW
 ### Meeting Notes (Minutes of Meetings)
 https://docs.google.com/document/d/1sAKEHlb5n9JzfRYK6OL4Pm4foj7QHOMjy63lytvxo4Y/edit?usp=sharing
 
-### Demo steps
+### Demo steps-Includes steps to run unit test cases for Stub (Note: Solitary test cases-TBD)
 ```
+For OpenCV setup- (Won't be required in phase 2 as it will be run as static library)
+sudo apt-get install libopenblas-dev liblapack-dev libx11-dev 
+sudo apt-get install 
+git clone https://github.com/opencv/opencv.git
+cd opencv
+mkdir build
+cd build
+cmake ..
+make 
+sudo make install
+
+For Dlib setup- (Won't be required in phase 2 as it will be run as static library)
+wget http://dlib.net/files/dlib-19.6.tar.bz2
+tar xvf dlib-19.6.tar.bz2
+cd dlib-19.6/
+mkdir build
+cd build
+cmake ..
+cmake --build . --config Release
+sudo make install
+sudo ldconfig
+
+For runnig our solution:
 git clone https://github.com/ToyasDhake/midterm_project.git
 cd midterm_project
 mkdir build
@@ -88,12 +110,11 @@ For license information, see [LICENSE.txt](LICENSE.txt).
 ### Contributors
 
 -Toyas Dhake (Driver)
-Computer engineer, from MIT College of Engineering, Pune.
-Skilled in embedded system with applications involving Arduino, Raspberry Pi and Jetson Boards.
+-Computer engineer, from MIT College of Engineering, Pune.
+-Skilled in embedded system with applications involving Arduino, Raspberry Pi and Jetson Boards.
 
 -Shivam Akhauri (Navigator)
-Former Artificial Intelligence Engineer at Ether Labs
-Former Machine learning Engineer and Project Lead at Tata Elxsi
-Skilled in AI/ML with applications in Computer vision, NLP and Robotics.
-
+-Former Artificial Intelligence Engineer at Ether Labs
+-Former Machine learning Engineer and Project Lead at Tata Elxsi
+-Skilled in AI/ML with applications in Computer vision, NLP and Robotics.
 
