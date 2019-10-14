@@ -6,31 +6,28 @@
 * @brief Main file for implementation of the Depth Perception project.
 */
 
-#include <dlib/opencv.h>
-#include <opencv2/highgui/highgui.hpp>
 #include <dlib/gui_widgets.h>
+#include <dlib/opencv.h>
+#include <iostream>
+#include <opencv2/highgui/highgui.hpp>
 #include <distance.hpp>
 #include <face.hpp>
-#include <iostream>
 
 int main() {
     CalculateDistance calculateDistance;
     // Initialize camera
     cv::VideoCapture cap(0);
     // Check camera is open
-    if (!cap.isOpened())
-    {
+    if (!cap.isOpened()) {
         std::cout << "Unable to connect to camera" << std::endl;
         return 1;
     }
     dlib::image_window win;
     // Until window is open
-    while(!win.is_closed())
-    {
+    while (!win.is_closed()) {
         // Grab a frame
         cv::Mat temp;
-        if (!cap.read(temp))
-        {
+        if (!cap.read(temp)) {
             break;
         }
         // Create object of Acme robotics Depth Preception module

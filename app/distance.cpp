@@ -8,15 +8,15 @@
 */
 
 #include <dlib/opencv.h>
-#include <opencv2/highgui/highgui.hpp>
 #include <dlib/image_processing/frontal_face_detector.h>
 #include <dlib/image_processing/render_face_detections.h>
 #include <dlib/image_processing.h>
 #include <dlib/gui_widgets.h>
 #include <dlib/image_io.h>
+#include <iostream>
+#include <opencv2/highgui/highgui.hpp>
 #include <distance.hpp>
 #include <face.hpp>
-#include <iostream>
 
 
 /**
@@ -55,8 +55,7 @@ std::vector<Face> CalculateDistance::getDistance(cv::Mat image) {
 * @params focalLength Focal length of camera
 * @return Distance from human in consideration
 */
-float CalculateDistance::calDist(float width,float focalLength)
-{
+float CalculateDistance::calDist(float width, float focalLength) {
     return 1;
 }
 

@@ -10,6 +10,7 @@
 #ifndef INCLUDE_DISTANCE_HPP_
 #define INCLUDE_DISTANCE_HPP_
 
+#include <vector>
 #include <opencv2/opencv.hpp>
 #include <face.hpp>
 
@@ -22,7 +23,7 @@ class CalculateDistance {
     double calculateFocalLength();
     CalculateDistance();
     std::vector<Face> getDistance(cv::Mat image);
-    float calDist(float width,float focalLength);
+    float calDist(float width, float focalLength);
 };
 
 #endif /* INCLUDE_DISTANCE_HPP_ */
