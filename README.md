@@ -16,13 +16,13 @@ We propose image processing techniques to estimate the distance of the human fro
 
 ### Main features of the product
 
-Distance perception for multiple humans concurrently from the Robots frame of reference
-Fast processing speed
-Cost effective solution - needs installation of only a camera in the Robot
-High accuracy
-Developed in C++(>11) with continuous integration 
-Developed by a team of two in an Agile iterative process 
-Standalone software product which includes all the dependencies
+- Distance perception for multiple humans concurrently from the Robots frame of reference
+- Fast processing speed
+- Cost effective solution - needs installation of only a camera in the Robot
+- High accuracy
+- Developed in C++(>11) with continuous integration 
+- Developed by a team of two in an Agile iterative process 
+- Standalone software product which includes all the dependencies
 
 ### Results 
 Accuracy: TBD
