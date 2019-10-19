@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.2.1)
 project (depthPerception)
+execute_process(COMMAND sudo apt-get install -y libopenblas-dev liblapack-dev libx11-dev build-essential libgtk2.0-dev pkg-config libavcodec-dev libopencv-dev libavformat-dev libswscale-dev)
 
 # Add project cmake modules to path.
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
