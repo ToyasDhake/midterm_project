@@ -94,11 +94,11 @@ The link to code coverage can be found here
 
 Travis path :
 
-[![Build Status](https://travis-ci.org/ToyasDhake/midterm_project.svg?branch=stub_function)](https://travis-ci.org/ToyasDhake/midterm_project)
+[![Build Status](https://travis-ci.org/shivamakhauri04/midterm_project.svg?branch=master)](https://travis-ci.org/shivamakhauri04/midterm_project)
 
 Coveralls :
 
-[![Coverage Status](https://coveralls.io/repos/github/ToyasDhake/midterm_project/badge.svg?branch=master)](https://coveralls.io/github/ToyasDhake/midterm_project?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/shivamakhauri04/midterm_project/badge.svg?branch=master)](https://coveralls.io/github/shivamakhauri04/midterm_project?branch=master)
 
 ### Copyright
 
