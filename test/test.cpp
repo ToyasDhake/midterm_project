@@ -53,7 +53,7 @@ TEST(setterTestForBottomCoordinates, should_pass) {
   double temp = 900.0;
   Face face(0, 0, 0, 0, 0);
   face.setW(temp);
-  double bottomCoordinate = face.getH();
+  double bottomCoordinate = face.getW();
   EXPECT_EQ(900.0, bottomCoordinate);
 }
 
