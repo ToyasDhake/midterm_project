@@ -1,4 +1,3 @@
- 
 //! "Copyright[2019] ShivamAkhauri, Toyas Dhake"
 /**
 * @file distanceTest.cpp
@@ -7,17 +6,18 @@
 * @copyright 2019 Shivam, Toyas 
 * @brief Contains gtest style test cases
 */
-#include <chrono>
+
 #include <gtest/gtest.h>
-#include "../app/face.cpp"
-#include "../app/distance.cpp"
 #include <dlib/opencv.h>
-#include <opencv2/highgui/highgui.hpp>
 #include <dlib/image_processing/frontal_face_detector.h>
 #include <dlib/image_processing/render_face_detections.h>
 #include <dlib/image_processing.h>
 #include <dlib/gui_widgets.h>
 #include <dlib/image_io.h>
+#include <chrono>
+#include <opencv2/highgui/highgui.hpp>
+#include <distance.hpp>
+#include <face.hpp>
 
 /**
 * @brief Test for face left coordinates
@@ -99,7 +99,7 @@ TEST(calculateDistance, TestForCalDist) {
   // set focal length as per camera specifications
   distance.focalLength = 642.857;
   double temp = distance.calDist(1, 1);
-  EXPECT_TRUE((0.17<= temp) && (0.18>=temp));
+  EXPECT_TRUE((0.17 <= temp) && (0.18 >= temp));
 }
 
 /**
@@ -111,7 +111,7 @@ TEST(calculateDistance, TestForFocalLength) {
   // constructor
   CalculateDistance dist;
   double temp = dist.calculateFocalLength();
-  EXPECT_TRUE((640<= temp) && (650>=temp));
+  EXPECT_TRUE((640 <= temp) && (650 >= temp));
 }
 
 /**
@@ -135,7 +135,7 @@ TEST(calculateDistance, productAccuracyTest_1) {
   cv::Mat testImg_ = dlib::toMat(testImg);
   // get distance for accuracy checking
   distance.getDistance(testImg_, test_face_detector);
-  EXPECT_TRUE((0.65<= distance.dist) && (0.85>=distance.dist));
+  EXPECT_TRUE((0.65 <= distance.dist) && (0.85 >= distance.dist));
 }
 
 /**
@@ -161,7 +161,7 @@ TEST(calculateDistance, productAccuracyTest_2) {
   cv::Mat testImg_ = dlib::toMat(testImg);
   // get distance for accuracy checking
   distance.getDistance(testImg_, test_face_detector);
-  EXPECT_TRUE((1.05<= distance.dist) && (1.15>=distance.dist));
+  EXPECT_TRUE((1.05 <= distance.dist) && (1.15 >= distance.dist));
 }
 
 /**
@@ -187,7 +187,7 @@ TEST(calculateDistance, productAccuracyTest_3) {
   cv::Mat testImg_ = dlib::toMat(testImg);
   // get distance for accuracy checking
   distance.getDistance(testImg_, test_face_detector);
-  EXPECT_TRUE((1.25<= distance.dist) && (1.45>=distance.dist));
+  EXPECT_TRUE((1.25 <= distance.dist) && (1.45 >= distance.dist));
 }
 
 /**
@@ -240,7 +240,7 @@ TEST(calculateDistance, productPerformanceTest_2) {
   // convert dlib form matrix to opencv form matrix
   cv::Mat testImg_ = dlib::toMat(testImg);
   // calculate distance on the test image
-  distance.getDistance(testImg_,test_face_detector);
+  distance.getDistance(testImg_, test_face_detector);
   // stop calculating the time at this point
   auto stop = std::chrono::high_resolution_clock::now();
   // calculate the executaion time for the code
