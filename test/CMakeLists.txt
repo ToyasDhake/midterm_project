@@ -4,6 +4,8 @@ add_executable(
     cpp-test
     main.cpp
     test.cpp
+    ../app/distance.cpp
+    ../app/face.cpp
 )
 
 

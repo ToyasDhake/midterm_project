@@ -10,10 +10,10 @@
 #ifndef INCLUDE_DISTANCE_HPP_
 #define INCLUDE_DISTANCE_HPP_
 
+#include <dlib/image_processing/frontal_face_detector.h>
 #include <vector>
 #include <opencv2/opencv.hpp>
 #include <face.hpp>
-#include <dlib/image_processing/frontal_face_detector.h>
 
 class CalculateDistance {
  private:
@@ -24,7 +24,8 @@ class CalculateDistance {
     double dist;
     double calculateFocalLength();
     CalculateDistance();
-    std::vector<Face> getDistance(cv::Mat image, dlib::frontal_face_detector detector);
+    std::vector<Face> getDistance(cv::Mat image,
+                                        dlib::frontal_face_detector detector);
     float calDist(float width, float focalLength);
 };
 
