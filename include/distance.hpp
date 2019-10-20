@@ -18,8 +18,9 @@ class CalculateDistance {
  private:
     double knownWidth = 7.0;
     double knownDistance = 36.0;
-    double focalLength = 1;
  public:
+    double focalLength;
+    double dist;
     double calculateFocalLength();
     CalculateDistance();
     std::vector<Face> getDistance(cv::Mat image);
