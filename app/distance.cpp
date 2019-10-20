@@ -61,7 +61,7 @@ std::vector<Face> CalculateDistance::getDistance(cv::Mat image) {
     float width;
     for (auto&& face : faces) {
         width = face.r - face.l; 
-        double dist = calDist(width,focalLength);
+        dist = calDist(width,focalLength);
         Face faceWithDistance(face.l, face.t, face.r, face.b, dist);
         facesWithDistance.emplace_back(faceWithDistance);
     }
