@@ -67,11 +67,9 @@ TEST(Face, setterTestForBottomCoordinates) {
   double temp = 200.0;
   // constructor
   Face face(0, 0, 0, 0, 0);
-  // setter
-  face.setY(temp);
-  // getter
-  double bottomCoordinate = face.getY();
-  EXPECT_EQ(200.0, bottomCoordinate);
+  face.setW(temp);
+  double bottomCoordinate = face.getW();
+  EXPECT_EQ(900.0, bottomCoordinate);
 }
 
 /**
