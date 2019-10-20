@@ -61,17 +61,31 @@ TEST(Face, setterTestForTopCoordinates) {
 }
 
 /**
-* @brief Test for bottom coordinates
+* @brief Test for face bottom coordinates
 */
 TEST(Face, setterTestForBottomCoordinates) {
-  double temp = 900.0;
+  double temp = 200.0;
   // constructor
   Face face(0, 0, 0, 0, 0);
   // setter
-  face.setW(temp);
+  face.setY(temp);
   // getter
-  double bottomCoordinate = face.getW();
-  EXPECT_EQ(900.0, bottomCoordinate);
+  double bottomCoordinate = face.getY();
+  EXPECT_EQ(200.0, bottomCoordinate);
+}
+
+/**
+* @brief Test for face Distance
+*/
+TEST(Face, setterTestForFaceDistance) {
+  double temp = 30.0;
+  // constructor
+  Face face(0, 0, 0, 0, 0);
+  // setter
+  face.setDistance(temp);
+  // getter
+  double faceDistance = face.getDistance();
+  EXPECT_EQ(30.0, faceDistance);
 }
 
 /**
