@@ -1,10 +1,7 @@
+
+[![Build Status](https://travis-ci.org/shivamakhauri04/midterm_project.svg?branch=master)](https://travis-ci.org/shivamakhauri04/midterm_project)       [![Coverage Status](https://coveralls.io/repos/github/shivamakhauri04/midterm_project/badge.svg?branch=master)](https://coveralls.io/github/shivamakhauri04/midterm_project?branch=master)      [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+
 # Depth perception module for Acme Robotics
-
-[![Build Status](https://travis-ci.org/shivamakhauri04/midterm_project.svg?branch=master)](https://travis-ci.org/shivamakhauri04/midterm_project)
-
-[![Coverage Status](https://coveralls.io/repos/github/shivamakhauri04/midterm_project/badge.svg?branch=master)](https://coveralls.io/github/shivamakhauri04/midterm_project?branch=master)
-
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
 ## Overview
 
