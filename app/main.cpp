@@ -9,6 +9,7 @@
 #include <dlib/opencv.h>
 #include <opencv2/highgui/highgui.hpp>
 #include <dlib/gui_widgets.h>
+#include <dlib/image_processing/frontal_face_detector.h>
 #include <distance.hpp>
 #include <face.hpp>
 #include <iostream>
@@ -21,6 +22,7 @@ int main() {
         std::cout << "Unable to connect to camera" << std::endl;
         return 1;
     }
+    dlib::frontal_face_detector detector = dlib::get_frontal_face_detector();
     dlib::image_window win;
     while(!win.is_closed())
     {
@@ -30,8 +32,7 @@ int main() {
         {
             break;
         }
-        CalculateDistance calculateDistance;
-        std::vector<Face> faces = calculateDistance.getDistance(temp);
+        std::vector<Face> faces = calculateDistance.getDistance(temp, detector);
         dlib::cv_image<dlib::bgr_pixel> cimg(temp);
         win.clear_overlay();
         win.set_image(cimg);

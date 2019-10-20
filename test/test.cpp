@@ -67,9 +67,11 @@ TEST(Face, setterTestForBottomCoordinates) {
   double temp = 200.0;
   // constructor
   Face face(0, 0, 0, 0, 0);
-  face.setW(temp);
-  double bottomCoordinate = face.getW();
-  EXPECT_EQ(900.0, bottomCoordinate);
+  // setter
+  face.setY(temp);
+  // getter
+  double bottomCoordinate = face.getY();
+  EXPECT_EQ(200.0, bottomCoordinate);
 }
 
 /**
@@ -119,8 +121,8 @@ TEST(calculateDistance, TestForFocalLength) {
 */
 TEST(calculateDistance, productAccuracyTest_1) {
   // fix the focal length value as specified in the camera specification sheet
-  // dlib::frontal_face_detector test_face_detector =
-  // dlib::get_frontal_face_detector();
+  dlib::frontal_face_detector test_face_detector =
+  dlib::get_frontal_face_detector();
   // create a empty matrix for testImg
   dlib::matrix<dlib::bgr_pixel> testImg;
   // constructor
@@ -132,7 +134,7 @@ TEST(calculateDistance, productAccuracyTest_1) {
   // typecast dlib matrix to opencv matrix
   cv::Mat testImg_ = dlib::toMat(testImg);
   // get distance for accuracy checking
-  distance.getDistance(testImg_);
+  distance.getDistance(testImg_, test_face_detector);
   EXPECT_TRUE((0.65<= distance.dist) && (0.85>=distance.dist));
 }
 
@@ -145,8 +147,8 @@ TEST(calculateDistance, productAccuracyTest_2) {
   // fix the focal length value as specified in the camera specification sheet
   double focalLength = 642.857;
   // initialize a separate face detector for solitary testing
-  // dlib::frontal_face_detector test_face_detector =
-  // dlib::get_frontal_face_detector();
+  dlib::frontal_face_detector test_face_detector =
+  dlib::get_frontal_face_detector();
   // create a empty matrix for testImg
   dlib::matrix<dlib::bgr_pixel> testImg;
   // constructor
@@ -158,7 +160,7 @@ TEST(calculateDistance, productAccuracyTest_2) {
   // typecast dlib matrix to opencv matrix
   cv::Mat testImg_ = dlib::toMat(testImg);
   // get distance for accuracy checking
-  distance.getDistance(testImg_);
+  distance.getDistance(testImg_, test_face_detector);
   EXPECT_TRUE((1.05<= distance.dist) && (1.15>=distance.dist));
 }
 
@@ -171,8 +173,8 @@ TEST(calculateDistance, productAccuracyTest_3) {
   // fix the focal length value as specified in the camera specification sheet
   double focalLength = 642.857;
   // initialize a separate face detector for solitary testing
-  //dlib::frontal_face_detector test_face_detector =
-  // dlib::get_frontal_face_detector();
+  dlib::frontal_face_detector test_face_detector =
+  dlib::get_frontal_face_detector();
   // create a empty matrix for testImg
   dlib::matrix<dlib::bgr_pixel> testImg;
   // constructor
@@ -184,7 +186,7 @@ TEST(calculateDistance, productAccuracyTest_3) {
   // typecast dlib matrix to opencv matrix
   cv::Mat testImg_ = dlib::toMat(testImg);
   // get distance for accuracy checking
-  distance.getDistance(testImg_);
+  distance.getDistance(testImg_, test_face_detector);
   EXPECT_TRUE((1.25<= distance.dist) && (1.45>=distance.dist));
 }
 
@@ -195,8 +197,8 @@ TEST(calculateDistance, productPerformanceTest_1) {
   // start the clock
   auto start = std::chrono::high_resolution_clock::now();
   // initialize a separate face detector for solitary testing
-  // dlib::frontal_face_detector test_face_detector =
-  // dlib::get_frontal_face_detector();
+  dlib::frontal_face_detector test_face_detector =
+  dlib::get_frontal_face_detector();
   // create a empty matrix for testImg
   dlib::matrix<dlib::bgr_pixel> testImg;
   // constructor
@@ -208,7 +210,7 @@ TEST(calculateDistance, productPerformanceTest_1) {
   // convert dlib form matrix to opencv form matrix
   cv::Mat testImg_ = dlib::toMat(testImg);
   // calculate distance on the test image
-  distance.getDistance(testImg_);
+  distance.getDistance(testImg_, test_face_detector);
   // stop calculating the time at this point
   auto stop = std::chrono::high_resolution_clock::now();
   // calculate the executaion time for the code
@@ -225,8 +227,8 @@ TEST(calculateDistance, productPerformanceTest_2) {
   // start the clock
   auto start = std::chrono::high_resolution_clock::now();
   // initialize a separate face detector for solitary testing
-  //dlib::frontal_face_detector test_face_detector =
-  //dlib::get_frontal_face_detector();
+  dlib::frontal_face_detector test_face_detector =
+  dlib::get_frontal_face_detector();
   // create a empty matrix for testImg
   dlib::matrix<dlib::bgr_pixel> testImg;
   // constructor
@@ -238,7 +240,7 @@ TEST(calculateDistance, productPerformanceTest_2) {
   // convert dlib form matrix to opencv form matrix
   cv::Mat testImg_ = dlib::toMat(testImg);
   // calculate distance on the test image
-  distance.getDistance(testImg_);
+  distance.getDistance(testImg_,test_face_detector);
   // stop calculating the time at this point
   auto stop = std::chrono::high_resolution_clock::now();
   // calculate the executaion time for the code
@@ -255,8 +257,8 @@ TEST(calculateDistance, productPerformanceTest_3) {
   // start the clock
   auto start = std::chrono::high_resolution_clock::now();
   // initialize a separate face detector for solitary testing
-  //dlib::frontal_face_detector test_face_detector =
-  //dlib::get_frontal_face_detector();
+  dlib::frontal_face_detector test_face_detector =
+  dlib::get_frontal_face_detector();
   // create a empty matrix for testImg
   dlib::matrix<dlib::bgr_pixel> testImg;
   // constructor
@@ -268,7 +270,7 @@ TEST(calculateDistance, productPerformanceTest_3) {
   // convert dlib form matrix to opencv form matrix
   cv::Mat testImg_ = dlib::toMat(testImg);
   // calculate distance on the test image
-  distance.getDistance(testImg_);
+  distance.getDistance(testImg_, test_face_detector);
   // stop calculating the time at this point
   auto stop = std::chrono::high_resolution_clock::now();
   // calculate the executaion time for the code

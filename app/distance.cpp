@@ -53,9 +53,8 @@ CalculateDistance::CalculateDistance() {
 * @params image Image captured by camera
 * @return Distance from nearest human in frame
 */
-std::vector<Face> CalculateDistance::getDistance(cv::Mat image) {
+std::vector<Face> CalculateDistance::getDistance(cv::Mat image, dlib::frontal_face_detector detector) {
     std::vector<Face> facesWithDistance;
-    dlib::frontal_face_detector detector = dlib::get_frontal_face_detector();
     dlib::cv_image<dlib::bgr_pixel> cimg(image); 
     std::vector<dlib::rectangle> faces = detector(cimg);
     float width;
