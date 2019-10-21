@@ -59,7 +59,7 @@ The above result is appended on the lower right corner of the human face-boundin
 
 ***Accuracy***: 100% (tested on 3 test images and got correct distances of the 
 human faces for all the three test cases. Deviations of +-10 centimeters observed 
-and ignored).
+and ignored. Also did testing on may live feeds).
  
 ***Processing speed***: average 38 milliseconds (tested on images on I5 CPU with
 8GB RAM. The results may vary with different system configurations and with increase 
@@ -67,7 +67,7 @@ in the number of faces in the frame).
 
 ### Known Limitations and Assumptions for the product :
 1. The depth estimation of the human from the robot’s frame of reference works 
-within a range of 0.25 meters to 10 meters.
+within a range of 0.25 meters to 5 meters (in ambient lighting conditions).
 2. The depth estimation model expects satisfactory lighting conditions.
 3. The depth estimation model expects the human face to be facing the robot 
 camera and within its field of view. 
@@ -88,6 +88,18 @@ P (pixel width values) which also increases proportionally with delta.
 
 ### AIP Details link
 https://docs.google.com/spreadsheets/d/1t8c64cWS98ADABuzGFxU81cme3-aIhM_4wCTikXWeNU/edit?usp=sharing
+
+We followed the Pair Programming development procedure which started with 
+both the developers doing an extensive literature survey. After agreement on 
+the algorithm and the approach, we moved ahead with the first level iteration 
+planning. The week one of the project involved development of stub functions and
+basic test cases, which was driver driven while the navigator was involved in 
+planning and sanity check as well as a prototype development for the complete 
+product as a proof of concept.
+The week 2 was started with the review of the potential risks and the remaining
+backlogs. We switched the roles, and the current driver implemented the 
+optimized distance calculation function and the accuracy/performance test cases,
+while the navigator did the review and to ensure quality of the product delivery.  
 
 ### Meeting Notes (Minutes of Meetings)
 https://docs.google.com/document/d/1sAKEHlb5n9JzfRYK6OL4Pm4foj7QHOMjy63lytvxo4Y/edit?usp=sharing
