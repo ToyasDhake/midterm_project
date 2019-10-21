@@ -82,12 +82,8 @@ P (pixel width values) which also increases proportionally with delta.
 ### System Overview
 ![](SystemOverview.png)
 
-
 ### Agile Development Process followed
 ![](Aip.png)
-
-### AIP Details link
-https://docs.google.com/spreadsheets/d/1t8c64cWS98ADABuzGFxU81cme3-aIhM_4wCTikXWeNU/edit?usp=sharing
 
 We followed the Pair Programming development procedure which started with 
 both the developers doing an extensive literature survey. After agreement on 
@@ -99,7 +95,10 @@ product as a proof of concept.
 The week 2 was started with the review of the potential risks and the remaining
 backlogs. We switched the roles, and the current driver implemented the 
 optimized distance calculation function and the accuracy/performance test cases,
-while the navigator did the review and to ensure quality of the product delivery.  
+while the navigator did the review and to ensure quality of the product delivery.
+
+### AIP Details link
+https://docs.google.com/spreadsheets/d/1t8c64cWS98ADABuzGFxU81cme3-aIhM_4wCTikXWeNU/edit?usp=sharing
 
 ### Meeting Notes (Minutes of Meetings)
 https://docs.google.com/document/d/1sAKEHlb5n9JzfRYK6OL4Pm4foj7QHOMjy63lytvxo4Y/edit?usp=sharing
