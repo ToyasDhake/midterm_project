@@ -6,8 +6,8 @@
 * @brief This is a class to store properties of faces.
 */
 
-#ifndef FACE_HPP_
-#define FACE_HPP_
+#ifndef INCLUDE_FACE_HPP_
+#define INCLUDE_FACE_HPP_
 
 class Face {
  private:
@@ -36,4 +36,4 @@ class Face {
 };
 
 
-#endif // FACE_HPP_
+#endif  // INCLUDE_FACE_HPP__

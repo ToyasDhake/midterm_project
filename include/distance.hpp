@@ -7,8 +7,8 @@
 * camera. 
 */
 
-#ifndef DISTANCE_HPP_
-#define DISTANCE_HPP_
+#ifndef INCLUDE_DISTANCE_HPP_
+#define INCLUDE_DISTANCE_HPP_
 
 #include <dlib/image_processing/frontal_face_detector.h>
 #include <vector>
@@ -38,4 +38,4 @@ class CalculateDistance {
 };
 
 
-#endif //  DISTANCE_HPP_
+#endif  // INCLUDE_DISTANCE_HPP_
