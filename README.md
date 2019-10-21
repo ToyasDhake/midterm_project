@@ -117,7 +117,7 @@ Run tests: ./test/cpp-test
 Run program: ./app/shell-app
 ```
 Note: The cmake command may prompt the user to enter his/her system's password
-to check for for pre-requisite sytem libraries, like X11, CBLAS, LAPACK. 
+to check for pre-requisite sytem libraries, like X11, CBLAS, LAPACK. 
 
 ### Known Issues and bugs
 - The open- source library used- Opencv and dlib have not been completely 
