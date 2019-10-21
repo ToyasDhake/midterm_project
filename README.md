@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/shivamakhauri04/midterm_project.svg?branch=master)](https://travis-ci.org/shivamakhauri04/midterm_project)       [![Coverage Status](https://coveralls.io/repos/github/shivamakhauri04/midterm_project/badge.svg?branch=master)](https://coveralls.io/github/shivamakhauri04/midterm_project?branch=master)      [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/shivamakhauri04/midterm_project/blob/implementation/LICENSE.txt)
+[![Build Status](https://travis-ci.org/shivamakhauri04/midterm_project.svg?branch=master)](https://travis-ci.org/shivamakhauri04/midterm_project)       [![Coverage Status](https://coveralls.io/repos/github/shivamakhauri04/midterm_project/badge.svg?branch=master)](https://coveralls.io/github/shivamakhauri04/midterm_project?branch=master)      [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/shivamakhauri04/midterm_project/blob/master/LICENSE.txt)
 
 # Depth perception module for Acme Robotics
 
