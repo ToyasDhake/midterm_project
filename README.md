@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/shivamakhauri04/midterm_project.svg?branch=master)](https://travis-ci.org/shivamakhauri04/midterm_project)       [![Coverage Status](https://coveralls.io/repos/github/shivamakhauri04/midterm_project/badge.svg?branch=master)](https://coveralls.io/github/shivamakhauri04/midterm_project?branch=master)      [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/shivamakhauri04/midterm_project.svg?branch=master)](https://travis-ci.org/shivamakhauri04/midterm_project)       [![Coverage Status](https://coveralls.io/repos/github/shivamakhauri04/midterm_project/badge.svg?branch=master)](https://coveralls.io/github/shivamakhauri04/midterm_project?branch=master)      [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/shivamakhauri04/midterm_project/blob/implementation/LICENSE.txt)
 
 # Depth perception module for Acme Robotics
 
@@ -101,15 +101,19 @@ cd midterm_project
 mkdir build
 cd build
 cmake ..
-Enter system password for verification 
 make -j<number of cores>  (Example- make -j12)
 Run tests: ./test/cpp-test
 Run program: ./app/shell-app
 ```
+Note: The cmake command may prompt the user to enter his/her system's password
+to check for for pre-requisite sytem libraries, like X11, CBLAS, LAPACK. 
 
 ### Known Issues and bugs
-The open- source library used- Opencv and dlib have not been completely 
+- The open- source library used- Opencv and dlib have not been completely 
 written in C++ 11 and greater. Hence cmake generates warnings.
+
+- For performance measurement in terms of processing speed, we use chrono which
+doesn't comply with cpplint.
 
 
 ### Copyright
