@@ -62,8 +62,8 @@ human faces for all the three test cases. Deviations of +-10 centimeters observe
 and ignored. Also did testing on may live feeds).
  
 ***Processing speed***: average 38 milliseconds (tested on images on I5 CPU with
-8GB RAM. The results may vary with different system configurations and with increase 
-in the number of faces in the frame).
+8GB RAM). The results may vary with different system configurations and with increase 
+in the number of faces in the frame.
 
 ### Known Limitations and Assumptions for the product :
 1. The depth estimation of the human from the robot’s frame of reference works 
@@ -81,6 +81,9 @@ P (pixel width values) which also increases proportionally with delta.
 
 ### System Overview
 ![](SystemOverview.png)
+
+The above shows the high level diagram of our system and the way it integrates 
+with the other components of the robotic system.
 
 ### Agile Development Process followed
 ![](Aip.png)
