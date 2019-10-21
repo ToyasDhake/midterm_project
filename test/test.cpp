@@ -1,10 +1,10 @@
 //! "Copyright[2019] ShivamAkhauri, Toyas Dhake"
 /**
 * @file distanceTest.cpp
-* @author ToyasDhake,ShivamAkhauri
-* @date 13 Octoberr 2019
+* @author ShivamAkhauri,ToyasDhake
+* @date 20 Octoberr 2019
 * @copyright 2019 Shivam, Toyas 
-* @brief Contains gtest style test cases
+* @brief Contains gtest style test cases including prodcuct accuracy and performance
 */
 
 #include <gtest/gtest.h>
@@ -68,9 +68,9 @@ TEST(Face, setterTestForBottomCoordinates) {
   // constructor
   Face face(0, 0, 0, 0, 0);
   // setter
-  face.setY(temp);
+  face.setW(temp);
   // getter
-  double bottomCoordinate = face.getY();
+  double bottomCoordinate = face.getW();
   EXPECT_EQ(200.0, bottomCoordinate);
 }
 
@@ -135,7 +135,8 @@ TEST(calculateDistance, productAccuracyTest_1) {
   cv::Mat testImg_ = dlib::toMat(testImg);
   // get distance for accuracy checking
   distance.getDistance(testImg_, test_face_detector);
-  EXPECT_TRUE((0.65 <= distance.dist) && (0.85 >= distance.dist));
+  EXPECT_TRUE((0.65 <= distance.realTimeDistance)
+  && (0.85 >= distance.realTimeDistance));
 }
 
 /**
@@ -144,8 +145,6 @@ TEST(calculateDistance, productAccuracyTest_1) {
   ran getDistance function (solitary testing)
 */
 TEST(calculateDistance, productAccuracyTest_2) {
-  // fix the focal length value as specified in the camera specification sheet
-  double focalLength = 642.857;
   // initialize a separate face detector for solitary testing
   dlib::frontal_face_detector test_face_detector =
   dlib::get_frontal_face_detector();
@@ -161,7 +160,8 @@ TEST(calculateDistance, productAccuracyTest_2) {
   cv::Mat testImg_ = dlib::toMat(testImg);
   // get distance for accuracy checking
   distance.getDistance(testImg_, test_face_detector);
-  EXPECT_TRUE((1.05 <= distance.dist) && (1.15 >= distance.dist));
+  EXPECT_TRUE((1.05 <= distance.realTimeDistance)
+  && (1.15 >= distance.realTimeDistance));
 }
 
 /**
@@ -170,8 +170,6 @@ TEST(calculateDistance, productAccuracyTest_2) {
   ran getDistance function (solitary testing)
 */
 TEST(calculateDistance, productAccuracyTest_3) {
-  // fix the focal length value as specified in the camera specification sheet
-  double focalLength = 642.857;
   // initialize a separate face detector for solitary testing
   dlib::frontal_face_detector test_face_detector =
   dlib::get_frontal_face_detector();
@@ -187,7 +185,8 @@ TEST(calculateDistance, productAccuracyTest_3) {
   cv::Mat testImg_ = dlib::toMat(testImg);
   // get distance for accuracy checking
   distance.getDistance(testImg_, test_face_detector);
-  EXPECT_TRUE((1.25 <= distance.dist) && (1.45 >= distance.dist));
+  EXPECT_TRUE((1.25 <= distance.realTimeDistance)
+  && (1.45 >= distance.realTimeDistance));
 }
 
 /**

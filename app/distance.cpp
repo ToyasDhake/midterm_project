@@ -19,26 +19,30 @@
 #include <opencv2/highgui/highgui.hpp>
 
 /**
-* @brief This is the function to calculate focal length of camera from a 
-* refrence iamge.
-* @return Focal length of camera
+* @brief Function to calculate focal length of camera from a 
+* reference iamge.
+* @return Focal length of camera calculated
 */
 double CalculateDistance::calculateFocalLength() {
+    // constructor call for the dlib face detector
     dlib::frontal_face_detector detector = dlib::get_frontal_face_detector();
     dlib::matrix<dlib::bgr_pixel>  referenceImg;
+    // load the refernce image
     dlib::load_image(referenceImg, "../app/reference.jpg");
     // Detect faces
     std::vector<dlib::rectangle> faces = detector(referenceImg);
-    float refWidth = 0;
+    // find the width of the detected face in pixels
+    double refWidth = 0;
     for (auto&& face : faces) {
         refWidth = face.r - face.l;
     }
+    // calculate the focal length from the refernce frame
     double focalLength = (refWidth * knownDistance) / knownWidth;
     return focalLength;
 }
 
 /**
-* @brief Constructor to set width of head and focal length.
+* @brief Constructor to set the width of human face and find focal length from reference image.
 * @params _width Width of head
 * @params _focalLength Focal length of camera
 */
@@ -47,30 +51,38 @@ CalculateDistance::CalculateDistance() {
 }
 
 /**
-* @brief This is the function which computes the distance from nearest human in 
-* frame.
-* @params image Image captured by camera
-* @return Distance from nearest human in frame
+* @brief This is the function which computes the distance of each human from the camera
+* @params image Image captured by camera, dlib face detector object
+* @return vector of Distances for each face in the frame
 */
 std::vector<Face> CalculateDistance::getDistance(cv::Mat image,
                                     dlib::frontal_face_detector detector) {
     std::vector<Face> facesWithDistance;
     dlib::cv_image<dlib::bgr_pixel> cimg(image);
     std::vector<dlib::rectangle> faces = detector(cimg);
-    float width;
+    // for each detected face calculate the distance
     for (auto&& face : faces) {
-        width = face.r - face.l;
-        dist = calDist(width, focalLength);
-        Face faceWithDistance(face.l, face.t, face.r, face.b, dist);
+        // calculate width for each face
+        double width = face.r - face.l;
+        // calculate the distance for each face
+        realTimeDistance = calDist(width, focalLength);
+        Face faceWithDistance(face.l, face.t, face.r, face.b, realTimeDistance);
+        // append the distance of each face in a vecor
         facesWithDistance.emplace_back(faceWithDistance);
     }
     return facesWithDistance;
 }
 
-
-float CalculateDistance::calDist(float width, float focalLength) {
-    float distInches = (focalLength*knownWidth) / width;
-    float distMetres = distInches * 0.0254;
+/**
+* @brief This function contains the formula for distance calculation
+* @params width of the detected face, focalLength of the camera
+* @return double value of the calculated distance
+*/
+double CalculateDistance::calDist(double width, double focalLength) {
+    // formula for distance calculation
+    double distInches = (focalLength*knownWidth) / width;
+    // convert inches measurement to meters
+    double distMetres = distInches * 0.0254;
     return distMetres;
 }
 

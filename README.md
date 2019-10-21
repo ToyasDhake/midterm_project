@@ -61,8 +61,8 @@ The above result is appended on the lower right corner of the human face-boundin
 human faces for all the three test cases. Deviations of +-10 centimeters observed 
 and ignored).
  
-***Processing speed***: 450 milliseconds (tested on 3 test images on I5 CPU. 
-The results may vary with different system configurations and with increase 
+***Processing speed***: average 38 milliseconds (tested on images on I5 CPU with
+8GB RAM. The results may vary with different system configurations and with increase 
 in the number of faces in the frame).
 
 ### Known Limitations and Assumptions for the product :
