@@ -3,7 +3,7 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/include
 )
 
-add_subdirectory(../include/dlib dlib_build)
+add_subdirectory(../vendor/dlib dlib_build)
 
  
 
