@@ -106,18 +106,18 @@ https://docs.google.com/spreadsheets/d/1t8c64cWS98ADABuzGFxU81cme3-aIhM_4wCTikXW
 ### Meeting Notes (Minutes of Meetings)
 https://docs.google.com/document/d/1sAKEHlb5n9JzfRYK6OL4Pm4foj7QHOMjy63lytvxo4Y/edit?usp=sharing
 
-### Demo steps-Includes steps to run solitary unit test cases
+### Demo to run GMock test
 ```
 For running our solution:
 
 git clone https://github.com/shivamakhauri04/midterm_project.git
 cd midterm_project
+git checkout GMock_Extra_Credit
 mkdir build
 cd build
 cmake ..
 make -j<number of cores>  (Example- make -j12)
 Run tests: ./test/cpp-test
-Run program: ./app/shell-app
 ```
 Note: The cmake command may prompt the user to enter his/her system's password
 to check for pre-requisite sytem libraries, like X11, CBLAS, LAPACK. 
