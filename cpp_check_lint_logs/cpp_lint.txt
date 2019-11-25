@@ -1,8 +1,12 @@
+toyas@toyas-MSI:~/midterm_project$ cpplint $( find . -name \*.hpp -or -name \*.cpp | grep -vE -e "^./build/" -e "^./vendor/" -e "^./docs/" -e "^./results" )
+
+Done processing ./test/main.cpp
+./test/test.cpp:36:  <chrono> is an unapproved C++11 header.  [build/c++11] [5]
+Done processing ./test/test.cpp
 Done processing ./include/face.hpp
 Done processing ./include/distance.hpp
-Done processing ./test/main.cpp
-Done processing ./test/test.cpp
-Done processing ./app/face.cpp
 Done processing ./app/main.cpp
+Done processing ./app/face.cpp
 Done processing ./app/distance.cpp
 Total errors found: 1
+

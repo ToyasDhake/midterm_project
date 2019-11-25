@@ -1,20 +1,20 @@
+toyas@toyas-MSI:~/midterm_project$ cppcheck --enable=all --std=c++11 -I include/ --suppress=missingIncludeSystem $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" )
+
+
 Checking app/distance.cpp ...
-1/5 files checked 15% done
+1/5 files checked 32% done
 Checking app/face.cpp ...
-2/5 files checked 28% done
+2/5 files checked 53% done
 Checking app/main.cpp ...
-3/5 files checked 38% done
+3/5 files checked 74% done
 Checking test/main.cpp ...
-4/5 files checked 41% done
+4/5 files checked 83% done
 Checking test/test.cpp ...
 5/5 files checked 100% done
-Checking app/distance.cpp ...
-1/5 files checked 18% done
-Checking app/face.cpp ...
-2/5 files checked 30% done
-Checking app/main.cpp ...
-3/5 files checked 43% done
-Checking test/main.cpp ...
-4/5 files checked 46% done
-Checking test/test.cpp ...
-5/5 files checked 100% done
+[app/face.cpp:114]: (style) The function 'setDistance' is never used.
+[app/face.cpp:98]: (style) The function 'setH' is never used.
+[app/face.cpp:82]: (style) The function 'setW' is never used.
+[app/face.cpp:50]: (style) The function 'setX' is never used.
+[app/face.cpp:66]: (style) The function 'setY' is never used.
+(information) Cppcheck cannot find all the include files (use --check-config for details)
+
