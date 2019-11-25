@@ -33,6 +33,8 @@ class CalculateDistance {
     // frame to calculateFocalLength function
     std::vector<Face> getDistance(cv::Mat image,
                                         dlib::frontal_face_detector detector);
+    double getNearestDistance(cv::Mat image,
+                                    dlib::frontal_face_detector detector);
     // function to calculate distance of the frame which contains formula
     double calDist(double width, double focalLength);
 };

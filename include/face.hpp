@@ -18,6 +18,8 @@ class Face {
  public:
     // constructor
     Face(double _x, double _y, double _w, double _h, double _distance);
+    Face();
+    virtual ~Face() = 0;
     // setter for x coordinates of the face
     void setX(double _x);
     double getX();
@@ -32,7 +34,7 @@ class Face {
     double getW();
     // setter for the distance of the face in the referce frame
     void setDistance(double _distance);
-    double getDistance();
+    virtual double getDistance() = 0;
 };
 
 

@@ -103,3 +103,6 @@ void Face::setDistance(double _distance) {
 double Face::getDistance() {
     return distance;
 }
+
+Face::~Face() {
+}

@@ -4,6 +4,8 @@ add_executable(
     cpp-test
     main.cpp
     test.cpp
+    Gmock.h
+    face.h
     ../app/distance.cpp
     ../app/face.cpp
 )

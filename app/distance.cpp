@@ -73,6 +73,29 @@ std::vector<Face> CalculateDistance::getDistance(cv::Mat image,
     return facesWithDistance;
 }
 
+double CalculateDistance::getNearestDistance(cv::Mat image,
+                                    dlib::frontal_face_detector detector) {
+    std::vector<Face> facesWithDistance;
+    dlib::cv_image<dlib::bgr_pixel> cimg(image);
+    std::vector<dlib::rectangle> faces = detector(cimg);
+    // for each detected face calculate the distance
+    for (auto&& face : faces) {
+        // calculate width for each face
+        double width = face.r - face.l;
+        // calculate the distance for each face
+        realTimeDistance = calDist(width, focalLength);
+        Face faceWithDistance(face.l, face.t, face.r, face.b, realTimeDistance);
+        // append the distance of each face in a vecor
+        facesWithDistance.emplace_back(faceWithDistance);
+    }
+    std::vector<double> distances;
+    for (auto&& face : facesWithDistance) {
+        distances.emplace_back(face.getDistance());
+    }
+    std::sort(distances.begin(), distances.end());
+    return distances.at(0);
+}
+
 /**
 * @brief This function contains the formula for distance calculation
 * @params width of the detected face, focalLength of the camera
